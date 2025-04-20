@@ -1,5 +1,13 @@
 @import 'tailwindcss';
 
+@theme {
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 90rem;
+  --container-xs: 311px;
+  --container-xl: 572px;
+  --container-6xl: 1110px;
+}
+
 :root {
   --dark-blue: #1b1d23;
   --dark-grey: #60636d;
@@ -30,6 +38,13 @@ body {
   letter-spacing: -0.2px;
 }
 
+.text-lg--mobile {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1.2px;
+}
+
 .text-md {
   font-size: 72px;
   font-weight: 700;
@@ -42,6 +57,21 @@ body {
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: 0;
+}
+
+.text-xs {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.39;
+  letter-spacing: 0;
+}
+
+.text-xs--vertical {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.39;
+  letter-spacing: 18px;
+  writing-mode: vertical-lr;
 }
 
 .text-body {

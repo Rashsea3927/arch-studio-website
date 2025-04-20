@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${spartan.variable} antialiased`}>
+      <body className={`${spartan.variable} antialiased overflow-x-hidden`}>
         <Header />
-        <main className='pt-[104px] h-[1000px]'>{children}</main>
+        <main className='h-[1000px]'>{children}</main>
       </body>
     </html>
   );
