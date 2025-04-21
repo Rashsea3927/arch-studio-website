@@ -23,7 +23,7 @@ const MobileNavigation = () => {
   return (
     <>
       <div
-        className={`absolute top-[104px] left-0 w-full h-screen z-0 bg-black/50 transition-all duration-500 ${
+        className={`absolute top-[104px] left-0 w-full h-screen z-10 bg-black/50 transition-all duration-500 ${
           isOpen ? 'opacity-100' : 'opacity-0 invisible'
         }`}
       />

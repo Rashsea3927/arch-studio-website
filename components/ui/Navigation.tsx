@@ -13,7 +13,10 @@ const Navigation = () => {
         <ul className='flex items-center gap-[60px]'>
           {navItems.map((item) => (
             <li key={item.label}>
-              <Link href={item.href} className='text-xs sm:text-(--medium-grey)'>
+              <Link
+                href={item.href}
+                className='text-xs text-(--medium-grey) transition-colors hover:text-(--dark-blue)'
+              >
                 {item.name}
               </Link>
             </li>
