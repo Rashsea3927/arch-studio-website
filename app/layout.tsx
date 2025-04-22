@@ -1,3 +1,4 @@
+import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import type { Metadata } from 'next';
 import { League_Spartan } from 'next/font/google';
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${spartan.variable} antialiased overflow-x-hidden`}>
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

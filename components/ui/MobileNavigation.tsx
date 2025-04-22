@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { navItems } from './Navigation';
 
 const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
   const handleToggle = () => {
     setIsOpen((prev) => !prev);
   };
@@ -19,6 +21,10 @@ const MobileNavigation = () => {
       body?.classList.remove('overflow-hidden');
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <>
