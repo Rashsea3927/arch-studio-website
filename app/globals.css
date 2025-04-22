@@ -4,6 +4,7 @@
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 90rem;
   --container-xs: 311px;
+  --container-sm: 476px;
   --container-xl: 572px;
   --container-6xl: 1110px;
 }

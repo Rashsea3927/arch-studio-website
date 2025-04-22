@@ -69,7 +69,7 @@ const HeroList = () => {
                       ? hero.image.tablet.height
                       : hero.image.desktop.height
                   }
-                  className='w-full h-[560px] sm:h-[720px] text-center object-cover'
+                  className='w-full h-[560px] text-center object-cover sm:h-[720px]'
                   alt=''
                 />
                 <div className='absolute top-[116px] left-1/2 -translate-x-1/2 z-10 max-w-xs w-full sm:max-w-[457px] sm:top-[186px] lg:translate-x-0 lg:left-[190px] lg:max-w-[544px]'>
@@ -82,7 +82,7 @@ const HeroList = () => {
             );
           })}
         </ul>
-        <div className='absolute bottom-[110px] max-w-xs sm:max-w-[457px] left-1/2 -translate-x-1/2 w-full sm:bottom-[179px] lg:translate-x-0 lg:left-[190px] lg:max-w-[544px]'>
+        <div className='absolute bottom-[110px] max-w-xs sm:max-w-[457px] left-1/2 -translate-x-1/2 w-full sm:bottom-[179px] lg:translate-x-0 lg:left-[160px] lg:max-w-[544px] xl:left-[190px]'>
           <div className='w-[252px]'>
             <LinkButton link='portfolio' text='See Our Portfolio' />
           </div>
