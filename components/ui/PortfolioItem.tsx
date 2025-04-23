@@ -3,12 +3,14 @@ import { useDeviceType } from '@/hooks/useDeviceType';
 import { PortfolioType } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 type Props = {
   portfolio: PortfolioType;
 };
 
 const PortfolioItem = ({ portfolio }: Props) => {
+  const pathname = usePathname();
   const device = useDeviceType();
   const imageSrc =
     device === 'mobile'
@@ -33,8 +35,8 @@ const PortfolioItem = ({ portfolio }: Props) => {
 
   return (
     <li key={portfolio.id}>
-      <Link href='/portfolio'>
-        <div className='relative after:absolute after:inset-0 after:z-[9] after:bg-linear-to-b after:from-black/0 after:to-black/50'>
+      <Link href='/portfolio' className='transition-colors'>
+        <div className='relative after:absolute after:inset-0 after:z-[9] after:bg-linear-to-b after:from-black/0 after:to-black/50 after:transition-colors hover:after:bg-(--white)/50'>
           <Image
             className='w-full h-auto object-cover'
             src={imageSrc}
@@ -44,7 +46,9 @@ const PortfolioItem = ({ portfolio }: Props) => {
           />
           <div className='absolute left-6 bottom-6 z-10 sm:left-10 sm:bottom-10'>
             <h3 className='text-sm text-(--white)'>{portfolio.title}</h3>
-            <p className='text-body text-(--white)/75'>View All Projects</p>
+            <p className='text-body text-(--white)/75'>
+              {pathname === '/portfolio' ? portfolio.date : 'View All Projects'}
+            </p>
           </div>
         </div>
       </Link>

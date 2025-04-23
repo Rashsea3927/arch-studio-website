@@ -7,7 +7,7 @@ const sortedFeaturedItems = featuredItems.sort((a, b) => a.featuredRank! - b.fea
 
 const Featured = () => {
   return (
-    <section className='mx-auto max-w-xs w-full mb-[132px] sm:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl'>
+    <section className='mx-auto max-w-xs w-full mb-[132px] sm:max-w-xl md:mb-[200px] lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl'>
       <div className='grid sm:grid-cols-2'>
         <h2 className='text-md text-(--dark-blue) sm:self-center'>Featured</h2>
         <div className='row-start-4 sm:row-start-1 sm:col-start-2 sm:w-[169px] sm:justify-self-end'>
