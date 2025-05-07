@@ -1,15 +1,11 @@
-import Featured from './_components/Featured';
-import Hero from './_components/Hero/Hero';
-import Team from './_components/Team';
-import Welcome from './_components/Welcome';
+import HeroImage from './HeroImage';
 
 export default function Home() {
   return (
-    <>
-      <Hero />
-      <Welcome />
-      <Team />
-      <Featured />
-    </>
+    <main>
+      <section>
+        <HeroImage />
+      </section>
+    </main>
   );
 }

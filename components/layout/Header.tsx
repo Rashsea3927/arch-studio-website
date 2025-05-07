@@ -1,21 +1,11 @@
-'use client';
-
-import MobileNavigation from '@/components/ui/MobileNavigation';
-import Navigation from '@/components/ui/Navigation';
-import { useDeviceType } from '@/hooks/useDeviceType';
-import Image from 'next/image';
-import Link from 'next/link';
+import Navigation from '@components/ui/Navigation';
 
 const Header = () => {
-  const device = useDeviceType();
   return (
-    <header className='relative flex items-center px-8 mx-auto py-8 justify-between sm:justify-start sm:gap-20 sm:max-w-xl sm:px-0 sm:py-14 lg:max-w-3xl lg:gap-24 xl:max-w-5xl 2xl:max-w-6xl'>
-      <h1>
-        <Link href='/'>
-          <Image src='/assets/logo.svg' width={97} height={40} alt='Arch' />
-        </Link>
-      </h1>
-      {device === 'mobile' ? <MobileNavigation /> : <Navigation />}
+    <header className='sticky top-0 left-0 z-10 h-24 p-8 bg-neutral-0 xs:px-0 xs:py-8 sm:px-0 sm:py-14 sm:h-auto'>
+      <div className='flex items-center justify-between mx-auto max-w-[375px] sm:max-w-sm sm:justify-normal sm:gap-20 lg:max-w-lg lg:gap-24 xl:max-w-xl 2xl:max-w-2xl'>
+        <Navigation />
+      </div>
     </header>
   );
 };

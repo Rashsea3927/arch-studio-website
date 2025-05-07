@@ -11,7 +11,7 @@ export const useDeviceType = () => {
       else setDevice('desktop');
     };
 
-    updateDevice(); // 初期呼び出し
+    updateDevice();
     window.addEventListener('resize', updateDevice);
     return () => window.removeEventListener('resize', updateDevice);
   }, []);

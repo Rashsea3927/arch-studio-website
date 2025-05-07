@@ -383,3 +383,23 @@ export const portfolioItems = [
     date: 'Feburary 2008',
   },
 ];
+
+export const aboutHeroImages = {
+  image: {
+    mobile: {
+      src: '/assets/about/mobile/image-hero.jpg',
+      width: 375,
+      height: 240,
+    },
+    tablet: {
+      src: '/assets/about/tablet/image-hero.jpg',
+      width: 573,
+      height: 720,
+    },
+    desktop: {
+      src: '/assets/about/desktop/image-hero.jpg',
+      width: 635,
+      height: 720,
+    },
+  },
+};
